@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загадочный текст</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">жмякай на рандомное место в экране.</div><script>
+    const texts = [
+        "жмякай на рандомное место в экране.",
+        "зачем ты зашёл сюда? …",
+        "тут ничего нет",
+        "уходи",
+        "зачем ты продолжаешь это?",
+        "здесь все равно ничего не происходит",
+        "почему ты никак не уйдешь?",
+        "тебе настолько интересно?",
+        "это финиш",
+        "у тебя больше нет причин оставаться здесь",
+        "это конец уходи",
+        "так ты всн еще здесь.. не смотря на все, что я сказал.",
+        "кажется твое любопытство не позволяет тебе уйти",
+        "ПОЛАГАЮ, У МЕНЯ НЕТ ВЫБОРА, ΚΡΟΜΕ ΚΑΚΚ ОТВЕТИТЬ НА НЕСКОЛЬΚО ТВОИХ ВОПРОΟВ. ТОГДА ТЫ НАКОНЕЦ УЙДЁШЬ.",
+        ""
+    ];
+    
+    let index = 0;
+    document.body.addEventListener("click", () => {
+        index = (index + 1) % texts.length;
+        document.getElementById("text").textContent = texts[index];
+    });
+</script>
+
+</body>
+</html>
